@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Twi Solution Home programme</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
       <img src="images/twi-logo.png" alt="Twi Logo" class="logo" />
       <nav>
-        <a href="">Home</a>
-        <a href="">About US</a>
-        <a href="">Programmes</a>
+        <a href="index.html">Home</a>
+        <a href="#about-us">About US</a>
+        <a href="#programmes">Programmes</a>
         <a href="">Community</a>
-        <a href="">Contact US</a>
+        <a href="contact.html">Contact US</a>
         <a href="" class="register">Register for free</a>
         <a href="" class="sign-in">Sign in</a>
       </nav>
@@ -37,7 +37,7 @@
 
           <div class="registration">
             <a href="" class="register">Register for Free</a>
-            <a href="" class="explore">Explore Programs</a>
+            <a href="#programmes" class="explore">Explore Programs</a>
           </div>
         </div>
 
@@ -51,7 +51,7 @@
         <h4 class="aim-elements">Explore</h4>
       </div>
 
-      <div class="question">
+      <div class="question" id="about-us">
         <h3 class="question-heading">Why Choose TWI?</h3>
         <p class="question-paragraph">
           Discover how TWI helps you build practical skills, gain real
@@ -159,7 +159,7 @@
         <h3>Growth</h3>
       </div>
 
-      <div class="courses">
+      <div class="courses" id="programmes">
         <h2>Explore Our Courses</h2>
         <p>
           Discover practical skills, build your experience, and find new
@@ -167,96 +167,194 @@
         </p>
       </div>
 
-    <div class="classes-container">
+      <div class="classes-container">
         <div class="sub-class">
-        <img src="images/course1.png" alt="" />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
+          <img src="images/course1.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
+
+        <div class="sub-class">
+          <img src="images/course2.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
+
+        <div class="sub-class">
+          <img src="images/course3.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
+
+        <div class="sub-class">
+          <img src="images/course4.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
+
+        <!-- Unseen boxes -->
+
+        <div class="sub-class extra-box" hidden>
+          <img src="images/course5.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
+
+        <div class="sub-class extra-box" hidden>
+          <img src="images/course6.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
+
+        <div class="sub-class extra-box" hidden>
+          <img src="images/course7.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
+
+        <div class="sub-class extra-box" hidden>
+          <img src="images/course6.png" alt="" />
+          <h3>Data Analysis</h3>
+          <p>
+            Learn to understand user needs, solve problems, and design useful
+            digital products through research, wireframing, and prototyping.
+          </p>
+          <a href="">Register for free</a>
+        </div>
       </div>
 
-      <div class="sub-class">
-        <img src="images/course2.png" alt=""  />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
-      </div>
+      <button id="viewMore">View All</button>
 
-      <div class="sub-class">
-        <img src="images/course3.png" alt=""  />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
-      </div>
+      <!-- FAQ SECTION -->
+      <section class="faq-section">
+        <div class="faq-left">
+          <p class="faq-label">Frequently Asked Questions</p>
 
-      <div class="sub-class">
-        <img src="images/course4.png" alt=""  />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
-      </div>
+          <h2>Everything you need to <span>Know</span></h2>
 
-      <!-- Unseen boxes -->
+          <p class="faq-description">
+            Find answers to common questions about our programmes, registrations
+            and your learning journey.
+          </p>
 
-       <div class="sub-class extra-box" hidden>
-        <img src="images/course1.png" alt="" />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
-      </div>
+          <a
+            href="mailto:twisolutionsltd@gmail.com?subject=Enquiry%20About%20TWI"
+            class="faq-email" target="_blank"
+          >
+            twisolutionsltd@gmail.com
+          </a>
+        </div>
 
-      <div class="sub-class extra-box" hidden>
-        <img src="images/course2.png" alt=""  />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
-      </div>
+        <div class="faq-right">
+          <details class="faq-item">
+            <summary>What is TWI?</summary>
+            <p>
+              TWI Solutions is a community focused on helping young Africans
+              build practical skills and access opportunities.
+            </p>
+          </details>
 
-      <div class="sub-class extra-box" hidden>
-        <img src="images/course3.png" alt=""  />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
-      </div>
+          <details class="faq-item">
+            <summary>Is it free to enroll?</summary>
+            <p>
+              Our programmes and enrollment details will provide information
+              about available fees and opportunities.
+            </p>
+          </details>
 
-      <div class="sub-class extra-box" hidden>
-        <img src="images/course4.png" alt=""  />
-        <h3>Data Analysis</h3>
-        <p>
-          Learn to understand user needs, solve problems, and design useful
-          digital products through research, wireframing, and prototyping.
-        </p>
-        <a href="">Register for free</a>
-      </div>
+          <details class="faq-item">
+            <summary>Who can join?</summary>
+            <p>
+              Young Africans who are interested in learning, growing and
+              developing practical skills can join our community.
+            </p>
+          </details>
 
-    </div>
+          <details class="faq-item">
+            <summary>What skill can I learn?</summary>
+            <p>
+              You can explore the different skills and programmes available on
+              TWI Solutions.
+            </p>
+          </details>
 
-    <button id="viewMore">View All</button>
+          <details class="faq-item">
+            <summary>How do I register?</summary>
+            <p>
+              Click the registration button on our website and follow the
+              instructions to get started.
+            </p>
+          </details>
 
+          <details class="faq-item extra-faq">
+            <summary>Do I need previous experience?</summary>
+            <p>No, beginners are welcome to explore our programmes.</p>
+          </details>
 
-    <script src="script.js"></script>
-      
-  </main>
+          <details class="faq-item extra-faq">
+            <summary>How long are the programmes?</summary>
+            <p>Programme duration depends on the learning track.</p>
+          </details>
+
+          <details class="faq-item extra-faq">
+            <summary>Will I receive a certificate?</summary>
+            <p>
+              Check the details of your selected programme for certification
+              information.
+            </p>
+          </details>
+
+          <button class="view-all" id="viewAllBtn">View All</button>
+        </div>
+      </section>
+
+      <!-- JOIN TWI BANNER -->
+      <section class="join-banner">
+        <div class="join-content">
+          <h3>Become Part of TWI Solutions</h3>
+
+          <p>
+            Join a community of young Africans building practical skills,
+            gaining experience and creating opportunities for a better future.
+          </p>
+
+          <a href="#" class="register-btn">Register for free</a>
+        </div>
+
+        <div class="join-image">
+          <img src="images/faq.png" alt="Student working on a laptop" />
+        </div>
+      </section>
+
+      <script src="script.js"></script>
+    </main>
   </body>
 </html>
