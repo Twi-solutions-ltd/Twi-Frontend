@@ -7,18 +7,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <img src="images/twi-logo.png" alt="Twi Logo" class="logo" />
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#about-us">About US</a>
-        <a href="#programmes">Programmes</a>
-        <a href="">Community</a>
-        <a href="contact.html">Contact US</a>
-        <a href="" class="register">Register for free</a>
-        <a href="" class="sign-in">Sign in</a>
-      </nav>
-    </header>
+    
+<header class="header">
+
+  <img src="images/twi-logo.png" alt="Twi Logo" class="logo" />
+
+  <!-- Hamburger Menu -->
+  <button class="menu-toggle" id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="main-nav">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+  <!-- Navigation Links -->
+  <nav id="main-nav">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About US</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#">Community</a>
+    <a href="contact.html">Contact US</a>
+    <a href="" class="register">Register for free</a>
+    <a href="" class="sign-in">Log in</a>
+  </nav>
+
+</header>
+
+
+
     <main>
       <div class="flex-container">
         <div class="mini-flex">
@@ -314,17 +334,17 @@
             </p>
           </details>
 
-          <details class="faq-item extra-faq">
+          <details class="faq-item extra-faq" hidden>
             <summary>Do I need previous experience?</summary>
             <p>No, beginners are welcome to explore our programmes.</p>
           </details>
 
-          <details class="faq-item extra-faq">
+          <details class="faq-item extra-faq" hidden>
             <summary>How long are the programmes?</summary>
             <p>Programme duration depends on the learning track.</p>
           </details>
 
-          <details class="faq-item extra-faq">
+          <details class="faq-item extra-faq" hidden>
             <summary>Will I receive a certificate?</summary>
             <p>
               Check the details of your selected programme for certification

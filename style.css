@@ -32,6 +32,24 @@ a{
   margin-right: 100px;
   margin-top: 10px;
 }
+/* MOBILE HAMBURGER NAVIGATION */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 27px;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
 
 nav{
   display: flex;
@@ -436,7 +454,6 @@ margin-left: 22px;
   display: block;
   margin: 20px auto;
   color: var(--Header-TEXT, #1C2127);
-/* Bold HEader/Bold Header 6 28-20 */
 font-family: var(--Font-Name, Poppins);
 font-size: var(--Spacing-Number-6, 20px);
 font-style: normal;
@@ -532,6 +549,12 @@ line-height: 100%;
   font-family: var(--Font-Name, Poppins);
 }
 
+/* Hide extra FAQ questions initially */
+
+.faq-item[hidden] {
+  display: none !important;
+}
+
 .faq-item {
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
@@ -569,23 +592,20 @@ line-height: 100%;
   padding-top: 10px;
 }
 
-.extra-faq {
-  display: none;
+/* Hide extra questions initially */
+.faq-right .faq-item.extra-faq[hidden] {
+  display: none !important;
+}
+
+/* Display extra questions when revealed */
+.faq-right .faq-item.extra-faq:not([hidden]) {
+  display: block !important;
 }
 
 .extra-faq.show {
   display: block;
 }
 
-/* .view-all {
-  display: block;
-  text-align: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 12px;
-  margin-top: 15px;
-  border: none;
-} */
 
 .view-all {
   display: block;
@@ -654,6 +674,756 @@ line-height: 100%;
 }
 
 
+
+/* MOBILE VIEW */
+
+@media (max-width: 768px) {
+
+  .header {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: nowrap;
+    position: relative;
+
+    width: calc(100% - 30px);
+    margin: 10px auto;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  /* Logo stays on the left */
+
+  .header .logo {
+    display: block;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  /* Hamburger stays on the right */
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* Hide navigation initially */
+
+  .header nav {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+
+    width: 100%;
+    padding: 20px;
+
+    background: #072718;
+    border-radius: 20px;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+
+    z-index: 1000;
+  }
+
+  /* Show navigation when clicked */
+
+  .header nav.active {
+    display: flex;
+  }
+
+  .header nav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    padding: 12px 15px;
+  }
+
+  .header nav .register,
+  .header nav .sign-in {
+    text-align: center;
+  }
+
+}
+
+
+/* TABLET AND SMALL DESKTOP */
+
+@media (max-width: 1100px) {
+
+  /* HEADER */
+
+  .header {
+    width: calc(100% - 40px);
+    margin: 10px auto 0;
+    padding: 15px 25px;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+
+  /* HERO SECTION */
+
+  .flex-container {
+    gap: 25px;
+    padding: 40px 25px;
+  }
+
+  .mini-flex {
+    width: auto;
+    flex: 1;
+    gap: 22px;
+    min-width: 0;
+  }
+
+  .mini-flex h2 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .mini-flex h4 {
+    line-height: 1.4;
+  }
+
+  .girl-image {
+    width: 40%;
+  }
+
+
+  /* AIM SECTION */
+
+  .aim {
+    width: calc(100% - 60px);
+    margin: 20px auto;
+    padding: 35px 20px;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  /* REASON CARDS */
+
+  .reason {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    gap: 20px;
+  }
+
+  .reason1,
+  .reason2,
+  .reason3 {
+    width: 100%;
+    min-width: 0;
+    padding: 30px 18px;
+    gap: 25px;
+  }
+
+
+  /* REVIEWS */
+
+  .review-header {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    gap: 20px;
+  }
+
+  .review-card {
+    min-width: 0;
+    padding: 20px;
+  }
+
+  .review-card > p {
+    line-height: 1.5;
+  }
+
+
+  /* PURPOSE SECTION */
+
+  .purpose {
+    height: auto;
+    min-height: 150px;
+    padding: 30px 20px;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  /* COURSES */
+
+  .classes-container {
+    width: calc(100% - 60px);
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .sub-class {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 440px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-class img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin: 0 0 18px;
+  }
+
+  .sub-class h3 {
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .sub-class p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  .sub-class a {
+    margin: 20px 0 0;
+    padding: 12px 20px;
+    height: auto;
+    align-self: flex-start;
+  }
+
+}
+
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+
+  .header {
+    flex-direction: column;
+    width: calc(100% - 30px);
+    padding: 18px;
+    gap: 18px;
+    border-radius: 25px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 15px 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+
+  /* HERO SECTION */
+
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 45px 25px;
+    gap: 30px;
+  }
+
+  .mini-flex {
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+  }
+
+  .mini-flex h3,
+  .mini-flex h2,
+  .mini-flex h4 {
+    text-align: center;
+  }
+
+  .mini-flex h2 {
+    font-size: 36px;
+  }
+
+  .mini-flex h4 {
+    max-width: 520px;
+  }
+
+  .registration {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .girl-image {
+    width: 70%;
+    max-width: 430px;
+  }
+
+
+  /* AIM SECTION */
+
+  .aim {
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .aim-elements {
+    font-size: 20px;
+  }
+
+
+  /* QUESTION SECTION */
+
+  .question {
+    margin: 40px 20px 0;
+  }
+
+  .question-paragraph {
+    width: 100%;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+
+
+  /* REASON CARDS */
+
+  .reason {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: calc(100% - 40px);
+    gap: 20px;
+  }
+
+
+  /* REVIEWS */
+
+  .reviews-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: calc(100% - 40px);
+    gap: 20px;
+  }
+
+  .review-card {
+    padding: 20px;
+  }
+
+  .review-profile {
+    gap: 10px;
+  }
+
+  .review-profile img {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  /* PURPOSE */
+
+  .purpose {
+    gap: 18px;
+    padding: 25px 15px;
+  }
+
+  .purpose h3 {
+    font-size: 17px;
+  }
+
+  .purpose img {
+    width: 18px;
+    height: auto;
+  }
+
+
+  /* COURSES */
+
+  .courses {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .courses h2 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .courses p {
+    line-height: 1.5;
+  }
+
+  .classes-container {
+    width: calc(100% - 40px);
+    gap: 20px;
+  }
+
+  .sub-class {
+    min-height: 420px;
+  }
+
+}
+
+
+/*  MOBILE PHONES */
+
+@media (max-width: 600px) {
+
+  /* HEADER */
+
+  .header {
+    width: calc(100% - 24px);
+    padding: 15px;
+    gap: 18px;
+    border-radius: 22px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  nav .register {
+    padding: 10px 13px;
+  }
+
+  nav .sign-in {
+    padding: 8px 15px;
+  }
+
+
+  /* HERO SECTION */
+
+  .flex-container {
+    padding: 35px 18px;
+    gap: 25px;
+  }
+
+  .mini-flex {
+    gap: 20px;
+  }
+
+  .mini-flex h3 {
+    font-size: 17px;
+  }
+
+  .mini-flex h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .mini-flex h4 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .registration {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .registration .register {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+  .explore {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .girl-image {
+    width: 100%;
+    max-width: 350px;
+  }
+
+
+  /* AIM SECTION */
+
+  .aim {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: calc(100% - 30px);
+    margin: 20px auto;
+    padding: 25px 15px;
+    gap: 25px 15px;
+  }
+
+  .aim-elements {
+    font-size: 18px;
+    text-align: center;
+  }
+
+
+  /* QUESTION SECTION */
+
+  .question {
+    margin: 40px 15px 0;
+  }
+
+  .question-heading {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  .question-paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 12px;
+    padding: 0 5px;
+  }
+
+
+  /* REASON CARDS */
+
+  .reason {
+    grid-template-columns: 1fr;
+    width: calc(100% - 30px);
+    gap: 20px;
+    margin: 25px auto;
+  }
+
+  .reason1,
+  .reason2,
+  .reason3 {
+    width: 100%;
+    padding: 28px 22px;
+    gap: 22px;
+  }
+
+
+  /* REVIEW HEADING */
+
+  .review-header {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .review-header h3 {
+    font-size: 21px;
+  }
+
+  .review-header p {
+    font-size: 15px;
+  }
+
+
+  /* REVIEW CARDS */
+
+  .reviews-container {
+    grid-template-columns: 1fr;
+    width: calc(100% - 30px);
+    margin: 25px auto;
+    gap: 20px;
+  }
+
+  .review-card {
+    padding: 22px;
+  }
+
+  .review-profile {
+    gap: 15px;
+  }
+
+  .review-profile img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .review-card > p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  /* PURPOSE SECTION */
+
+  .purpose {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: auto;
+    min-height: 120px;
+    padding: 25px 15px;
+  }
+
+  .purpose h3 {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .purpose img {
+    width: 14px;
+    height: 14px;
+  }
+
+
+  /* COURSES HEADING */
+
+  .courses {
+    padding: 0 18px;
+  }
+
+  .courses h2 {
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .courses p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+
+  /* COURSE CARDS */
+
+  .classes-container {
+    grid-template-columns: 1fr;
+    width: calc(100% - 30px);
+    margin: 30px auto;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .sub-class {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 15px;
+    border-radius: 18px;
+  }
+
+  .sub-class img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0 0 18px;
+    border-radius: 14px;
+  }
+
+  .sub-class h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+
+  .sub-class p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .sub-class a {
+    margin: 18px 0 0;
+    padding: 12px 18px;
+    height: auto;
+    font-size: 13px;
+  }
+
+
+  /* VIEW ALL */
+
+  #viewMore {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+  .header {
+    width: calc(100% - 16px);
+    padding: 12px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .mini-flex h2 {
+    font-size: 26px;
+  }
+
+  .mini-flex h4 {
+    font-size: 14px;
+  }
+
+  .registration {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .registration a {
+    text-align: center;
+  }
+
+  .aim-elements {
+    font-size: 16px;
+  }
+
+  .courses h2 {
+    font-size: 24px;
+  }
+
+}
 
 
 /* RESPONSIVE DESIGN */
