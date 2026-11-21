@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWI Solutions - Student Information</title>
+    <link rel="stylesheet" href="student-info.css">
+</head>
+<body>
+
+    <main class="page-wrapper">
+        <div class="setup-container">
+            
+            <!-- Header & Stepper (Step 2 Active) -->
+            <header class="setup-header">
+                <h1>Profile Set up</h1>
+                <p>Join a community of students ready to learn and grow!</p>
+
+                <div class="stepper">
+                    <div class="step completed">✓</div>
+                    <div class="step-line active-line"></div>
+                    <div class="step active">2</div>
+                    <div class="step-line"></div>
+                    <div class="step">3</div>
+                </div>
+            </header>
+
+            <!-- Form Fields -->
+            <form id="studentInfoForm" class="info-form">
+                
+                <!-- Preferred Name -->
+                <div class="input-group">
+                    <label for="preferredName">Preferred Name</label>
+                    <input type="text" id="preferredName" placeholder="Full Name" required>
+                </div>
+
+                <!-- Date of Birth with Custom Calendar + Custom Month/Year Popovers -->
+                <div class="input-group">
+                    <label for="dob">Date of birth</label>
+                    <div class="custom-calendar-wrapper" id="dobWrapper">
+                        <div class="input-with-icon" id="dobInputBox">
+                            <input type="text" id="dob" placeholder="DD / MM / YYYY" readonly required>
+                            <svg class="calendar-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+
+                        <!-- Calendar Popup -->
+                        <div class="calendar-dropdown hidden" id="calendarDropdown">
+                            
+                            <!-- Custom Month & Year Trigger Buttons -->
+                            <div class="calendar-header">
+                                <button type="button" class="picker-trigger" id="monthTrigger">
+                                    <span id="monthDisplay">January</span>
+                                    <span class="chevron">▾</span>
+                                </button>
+
+                                <button type="button" class="picker-trigger" id="yearTrigger">
+                                    <span id="yearDisplay">2000</span>
+                                    <span class="chevron">▾</span>
+                                </button>
+                            </div>
+
+                            <!-- Custom Searchable Month Popover (Matching Monrhs.png) -->
+                            <div class="picker-popover hidden" id="monthPopover">
+                                <div class="popover-search">
+                                    <input type="text" id="monthSearchInput" placeholder="Search">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg>
+                                </div>
+                                <div class="popover-list" id="monthList"></div>
+                                <div class="popover-footer">
+                                    <button type="button" class="btn-apply" id="applyMonthBtn">Apply</button>
+                                </div>
+                            </div>
+
+                            <!-- Custom Searchable Year Popover (Matching Monrhs.png) -->
+                            <div class="picker-popover hidden" id="yearPopover">
+                                <div class="popover-search">
+                                    <input type="text" id="yearSearchInput" placeholder="Search">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg>
+                                </div>
+                                <div class="popover-list" id="yearList"></div>
+                                <div class="popover-footer">
+                                    <button type="button" class="btn-apply" id="applyYearBtn">Apply</button>
+                                </div>
+                            </div>
+
+                            <!-- Weekdays -->
+                            <div class="calendar-weekdays">
+                                <span>Mo</span>
+                                <span>Tu</span>
+                                <span>We</span>
+                                <span>Th</span>
+                                <span>Fr</span>
+                                <span>Sa</span>
+                                <span>Su</span>
+                            </div>
+
+                            <!-- Days Grid -->
+                            <div class="calendar-days" id="calendarDays"></div>
+
+                            <!-- Calendar Footer -->
+                            <div class="calendar-footer">
+                                <button type="button" class="btn-calendar-next" id="calendarNextBtn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gender Dropdown -->
+                <div class="input-group">
+                    <label>Gender</label>
+                    <div class="custom-select-wrapper" id="genderDropdown">
+                        <div class="select-selected">Gender</div>
+                        <div class="select-items select-hide gender-items">
+                            <div class="gender-option" data-value="Female">
+                                <span class="option-box"></span>
+                                <span>Female</span>
+                            </div>
+                            <div class="gender-option" data-value="Male">
+                                <span class="option-box"></span>
+                                <span>Male</span>
+                            </div>
+                            <div class="gender-option" data-value="Preferred not to say">
+                                <span class="option-box"></span>
+                                <span>Preferred not to say</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- State of Residence Dropdown -->
+                <div class="input-group">
+                    <label>State of Residence</label>
+                    <div class="custom-select-wrapper" id="stateDropdown">
+                        <div class="select-selected">State of Residence</div>
+                        <div class="select-items select-hide">
+                            <div data-value="Abia">Abia</div>
+                            <div data-value="Adamawa">Adamawa</div>
+                            <div data-value="Akwa Ibom">Akwa Ibom</div>
+                            <div data-value="Anambra">Anambra</div>
+                            <div data-value="Bauchi">Bauchi</div>
+                            <div data-value="Bayelsa">Bayelsa</div>
+                            <div data-value="Benue">Benue</div>
+                            <div data-value="Borno">Borno</div>
+                            <div data-value="Cross River">Cross River</div>
+                            <div data-value="Delta">Delta</div>
+                            <div data-value="Ebonyi">Ebonyi</div>
+                            <div data-value="Edo">Edo</div>
+                            <div data-value="Ekiti">Ekiti</div>
+                            <div data-value="Enugu">Enugu</div>
+                            <div data-value="Gombe">Gombe</div>
+                            <div data-value="Imo">Imo</div>
+                            <div data-value="Jigawa">Jigawa</div>
+                            <div data-value="Kaduna">Kaduna</div>
+                            <div data-value="Kano">Kano</div>
+                            <div data-value="Katsina">Katsina</div>
+                            <div data-value="Kebbi">Kebbi</div>
+                            <div data-value="Kogi">Kogi</div>
+                            <div data-value="Kwara">Kwara</div>
+                            <div data-value="Lagos">Lagos</div>
+                            <div data-value="Nasarawa">Nasarawa</div>
+                            <div data-value="Niger">Niger</div>
+                            <div data-value="Ogun">Ogun</div>
+                            <div data-value="Ondo">Ondo</div>
+                            <div data-value="Osun">Osun</div>
+                            <div data-value="Oyo">Oyo</div>
+                            <div data-value="Plateau">Plateau</div>
+                            <div data-value="Rivers">Rivers</div>
+                            <div data-value="Sokoto">Sokoto</div>
+                            <div data-value="Taraba">Taraba</div>
+                            <div data-value="Yobe">Yobe</div>
+                            <div data-value="Zamfara">Zamfara</div>
+                            <div data-value="FCT">FCT</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Placement Checkbox -->
+                <div class="checkbox-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="jobPlacement">
+                        <span class="checkbox-text">Would you like TWI to support you with job placement after completing your course?</span>
+                    </label>
+                </div>
+
+                <!-- Continue Button -->
+                <button type="submit" class="btn-continue">Continue</button>
+            </form>
+
+        </div>
+    </main>
+
+    <script src="student-info.js"></script>
+</body>
+</html>
