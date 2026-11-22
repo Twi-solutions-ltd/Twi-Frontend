@@ -1,0 +1,360 @@
+:root {
+    --outer-bg: #a4b2aa;
+    --container-bg: #ffffff;
+    --text-dark: #111111;
+    --text-muted: #555555;
+    --border-color: #e5e7eb;
+    --btn-bg: #07190e;
+    --accent-gold: #d4a346;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--outer-bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 760px;
+}
+
+.setup-container {
+    background-color: var(--container-bg);
+    border-radius: 24px;
+    padding: 40px 48px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.setup-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.setup-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.setup-header p {
+    font-size: 12px;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto 24px auto;
+    line-height: 1.5;
+}
+
+/* Stepper */
+.stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+.step.active,
+.step.completed {
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
+    color: #ffffff;
+}
+
+.step-line {
+    height: 1.5px;
+    background-color: #333333;
+    width: 120px;
+}
+
+.step-line.active-line {
+    background-color: var(--btn-bg);
+}
+
+/* Review Sections & Cards */
+.review-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.review-card {
+    background-color: #f9f9f8;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.card-header-row h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+}
+
+.card-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.btn-edit {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f3f4f2;
+    border: 1px solid #d1d5db;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-edit:hover {
+    background-color: #e5e7eb;
+}
+
+/* Track Card Content */
+.track-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.track-image {
+    width: 180px;
+    height: 110px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.track-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.track-details h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.track-details p {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.track-pill {
+    background-color: #e8ede9;
+    color: #07190e;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Person Information Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.info-label {
+    font-size: 11px;
+    color: #777777;
+}
+
+.info-val {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Terms Checkbox */
+.terms-group {
+    margin: 8px 0;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.custom-checkbox input {
+    accent-color: var(--btn-bg);
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.custom-checkbox a {
+    color: var(--btn-bg);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Primary Button (Component 71) */
+.btn-continue {
+    width: 100%;
+    background-color: var(--btn-bg);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-continue:hover {
+    opacity: 0.92;
+}
+
+/* Loader Screen Overlay */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.spinner {
+    width: 44px;
+    height: 44px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid var(--btn-bg);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.spinner-container p {
+    font-size: 13px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success Modal Overlay (Frame 196) */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.success-card {
+    background-color: #ffffff;
+    border-radius: 28px;
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.success-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.success-shield {
+    width: 72px;
+    height: 72px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.success-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.success-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none !important;
+}
