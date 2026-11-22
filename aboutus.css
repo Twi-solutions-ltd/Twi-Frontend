@@ -1,0 +1,661 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #FCFCFC;
+}
+
+.logo{
+  width: 55px;
+  height: 55px;
+  top: 23px;
+  left: 32px;
+  border-radius: 28px;
+}
+
+a{
+  color: #FFFFFF;
+}
+
+.header{
+  display: flex;
+  justify-content: flex-start;
+  gap: 90px;
+  align-items: center;
+  padding: 20px 60px;
+  background: #072718;
+  border-radius: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+/* =====================================
+   MOBILE HAMBURGER NAVIGATION
+===================================== */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 27px;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+nav a{
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.register{
+  background: #D09C3B;
+  padding: 15px;
+  border-radius: 40px;
+  text-decoration: none;
+}
+
+.sign-in{
+  border-color: #D2D3D4;
+  padding-left:25px ;
+  padding-right:25px ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid;
+  border-radius: 40px;
+}
+
+.mini-flex h3{
+  color: var(--Base-color-Accent-50, #D09C3B);
+font-family: var(--Font-Name, Poppins);
+font-size: var(--Spacing-Number-6, 20px);
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+}
+
+h2{
+  color: var(--Base-color-green-Base, #072718);
+font-family: var(--Font-Name, Poppins);
+font-size: var(--Spacing-Number-12, 44px);
+font-style: normal;
+font-weight: 700;
+line-height: 100%; 
+}
+
+h4{
+
+color: var(--BODY-TEST, #686B6F);
+font-family: var(--Font-2, "League Spartan");
+font-size: var(--Spacing-Number-18, 18px);
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+}
+
+.mini-flex{
+  display: flex;
+width: 687px;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.girl-image {
+  width: 35%;
+  height: auto;
+   mask-image: linear-gradient(to bottom, black 70%, transparent 90%)
+}
+
+.flex-container > div {
+  flex: 1;
+}
+
+.explore{
+border-radius: 28px;
+border: 1px solid var(--BODY-TEST, #686B6F);
+color: #04140C;
+text-decoration: none;
+padding: 10px 20px 10px 20px;
+text-align: center;
+}
+
+.registration{
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+
+
+
+
+/* BRIEF HISTORY SECTION */
+
+.history-section {
+  width: 100%;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+
+/* HISTORY HERO SECTION */
+
+.history-hero {
+  width: 100%;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  isolation: isolate;
+}
+
+
+/* HISTORY IMAGE */
+
+.history-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+background: rgba(7, 39, 24, 0.45)
+}
+
+
+/* DARK OVERLAY ON IMAGE */
+
+.history-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+
+/* HERO TEXT */
+
+.history-content {
+  max-width: 600px;
+  color: white;
+  text-align: center;
+}
+
+.history-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  color:#FCFCFC
+}
+
+.history-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+
+/* MISSION AND VISION SECTION */
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+
+/* MISSION AND VISION CARDS */
+
+.info-card {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 25px 20px;
+  text-align: center;
+  min-height: 140px;
+  box-sizing: border-box;
+}
+
+.info-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #D09C3B;
+  margin: 0 0 15px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: #686B6F;
+  font-family: var(--Font-Name, Poppins);
+font-size: var(--Spacing-Number-8, 18px);
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 768px) {
+
+  .header {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: nowrap;
+    position: relative;
+
+    width: calc(100% - 30px);
+    margin: 10px auto;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  /* Logo stays on the left */
+
+  .header .logo {
+    display: block;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  /* Hamburger stays on the right */
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* Hide navigation initially */
+
+  .header nav {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+
+    width: 100%;
+    padding: 20px;
+
+    background: #072718;
+    border-radius: 20px;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+
+    z-index: 1000;
+  }
+
+  /* Show navigation when clicked */
+
+  .header nav.active {
+    display: flex;
+  }
+
+  .header nav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    padding: 12px 15px;
+  }
+
+  .header nav .register,
+  .header nav .sign-in {
+    text-align: center;
+  }
+
+}
+
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .header {
+    width: calc(100% - 40px);
+    margin: 10px auto 0;
+    padding: 15px 25px;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .flex-container {
+    gap: 25px;
+    padding: 40px 25px;
+  }
+
+  .mini-flex {
+    width: auto;
+    gap: 20px;
+  }
+
+  .mini-flex h3 {
+    font-size: 18px;
+  }
+
+  .mini-flex h2 {
+    font-size: 36px;
+  }
+
+  .mini-flex h4 {
+    font-size: 16px;
+  }
+
+  .girl-image {
+    width: 40%;
+  }
+}
+
+
+/* =====================================
+   SMALL TABLETS
+===================================== */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    width: calc(100% - 30px);
+    padding: 15px 20px;
+    gap: 15px;
+    border-radius: 25px;
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+    gap: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 45px 25px;
+    gap: 30px;
+  }
+
+  .mini-flex {
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+  }
+
+  .mini-flex h3,
+  .mini-flex h2,
+  .mini-flex h4 {
+    text-align: center;
+  }
+
+  .mini-flex h2 {
+    font-size: 36px;
+  }
+
+  .mini-flex h4 {
+    max-width: 520px;
+  }
+
+  .registration {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .girl-image {
+    width: 70%;
+    max-width: 430px;
+  }
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 480px) {
+
+  .header {
+    width: calc(100% - 24px);
+    padding: 15px;
+    gap: 18px;
+    border-radius: 22px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  nav {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  nav .register {
+    padding: 10px 13px;
+  }
+
+  .sign-in {
+    padding: 8px 15px;
+  }
+
+  .flex-container {
+    padding: 35px 18px;
+    gap: 25px;
+  }
+
+  .mini-flex {
+    gap: 20px;
+  }
+
+  .mini-flex h3 {
+    font-size: 17px;
+  }
+
+  .mini-flex h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .mini-flex h4 {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .registration {
+    gap: 12px;
+    margin-top: 5px;
+  }
+
+  .registration .register {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+  .explore {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .girl-image {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+/* =====================================
+   VERY SMALL PHONES
+===================================== */
+
+@media (max-width: 350px) {
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .mini-flex h2 {
+    font-size: 26px;
+  }
+
+  .registration {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+}
+
+
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+  .history-hero {
+    min-height: 280px;
+  }
+
+  .history-content h2 {
+    font-size: 24px;
+  }
+
+  .history-content p {
+    font-size: 14px;
+  }
+
+  .mission-vision {
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .info-card {
+    padding: 20px 15px;
+  }
+
+}
+
+
+
+   /* MOBILE RESPONSIVENESS */
+
+@media (max-width: 550px) {
+
+  .history-section {
+    padding-bottom: 30px;
+  }
+
+  .history-hero {
+    min-height: 220px;
+    padding: 30px 20px;
+  }
+
+  .history-image {
+    object-position: center;
+  }
+
+  .history-content h2 {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+
+  .history-content p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 0 15px;
+  }
+
+  .info-card {
+    min-height: auto;
+    padding: 22px 18px;
+  }
+
+  .info-card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .info-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+}
