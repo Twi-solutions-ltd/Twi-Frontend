@@ -1,0 +1,99 @@
+.mother{
+    min-height: 50px;
+    background-color: #304B3F;
+    padding: 40px;
+    margin: 40px;
+}
+
+h3{
+    padding: 20px;
+    color: orange;
+}
+
+.fc{
+    min-height: 50px;
+    color: white;
+    padding-left: 5px;
+    display: flex;   
+}
+
+.fgc{
+    width:50%
+}
+
+.sgc{ 
+    width:25%
+}
+
+.tgc{
+    width:25%
+}
+
+img{
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+hr{
+    color: grey;
+}
+
+.sc{
+    min-height: 50px;
+    display: flex;
+}
+
+.scfgc{
+    width: 50%;
+    color: white;
+    padding: 5px;
+}
+
+.scsgc{
+    width: 50%;
+    color: white;
+    padding: 5px;
+}
+
+.scsgc-a{
+    width: 15px;
+    height: 15px;
+}
+
+.tc{
+    min-height: 50px;
+    display: flex;
+}
+
+.tcfgc{
+    width: 50%;
+    color: orange;
+    padding: 5px;
+}
+
+.tcsgc{
+    width: 50%;
+    text-decoration: underline;
+    color: white;
+}
+.tcsgc-ul{
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+.dfp{
+    color: #C5C8C8;
+    display: flex;
+    gap:20px;
+}
+
+.fgc-s{
+    color: #A6AEAB;
+}
+
+.fgc-2s{
+    color: white;
+}
